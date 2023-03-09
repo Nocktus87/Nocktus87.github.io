@@ -1,0 +1,129 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-conteiner {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: blueviolet;
+}
+
+.main {
+    grid-area: main;
+    background-color: coral;
+    align-items: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: darkgoldenrod;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img1 {
+    height: auto;
+    width: auto;
+    max-height: 50px;
+    max-width: 50px;
+
+}
+
+.grid-conteiner {
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main"
+        "sidebar"
+        "footer"
+}
+
+@media (min-width: 600px) {
+    .grid-conteiner {
+        grid-template:
+            "header header" 100px
+            "navbar main" auto
+            "sidebar sidebar" auto
+            "footer footer" 75px /
+            200px auto;
+        background-color: rgb(255, 254, 205);
+
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-conteiner {
+        grid-template:
+            "header header header" 100px
+            "navbar sidebar main" auto
+            "footer footer footer" 75px /
+            200px auto 200px;
+        background-color: black;
+    }
+}
+
+h1 {
+    font-style: oblique;
+
+}
+
+h2 {
+    font-style: oblique;
+}
+
+p {
+    font-size: 150%;
+}
+
+.Hide {
+    display: none;
+    color: white;
+    background-color: red;
+}
+
+.show {
+    display: block;
+}
+
+.btn {
+    background-color: yellow;
+    border-color: blue;
+    padding: 3px;
+}
